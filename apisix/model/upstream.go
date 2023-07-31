@@ -46,9 +46,9 @@ var UpstreamSchema = tfsdk.Schema{
 			PlanModifiers: []tfsdk.AttributePlanModifier{
 				plan_modifier.DefaultString("roundrobin"),
 			},
-			Validators: []tfsdk.AttributeValidator{
-				validator.StringInSlice("roundrobin", "chash", "ewma", "least_conn"),
-			},
+			//Validators: []tfsdk.AttributeValidator{
+			//	validator.StringInSlice("roundrobin", "chash", "ewma", "least_conn"),
+			//},
 		},
 		"service_name": {
 			Type:     types.StringType,
@@ -78,9 +78,9 @@ var UpstreamSchema = tfsdk.Schema{
 			Type:     types.StringType,
 			Optional: true,
 			Computed: true,
-			Validators: []tfsdk.AttributeValidator{
-				validator.StringInSlice("pass", "node", "rewrite"),
-			},
+			//Validators: []tfsdk.AttributeValidator{
+			//	validator.StringInSlice("pass", "node", "rewrite"),
+			//},
 			PlanModifiers: []tfsdk.AttributePlanModifier{
 				plan_modifier.DefaultString("pass"),
 			},
